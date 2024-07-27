@@ -1,0 +1,36 @@
+{
+  "name": "fabio-node-oto",
+  "version": "1.0.0",
+  "description": "express course",
+  "main": "app.js",
+  "scripts": {
+    "start:dev": "NODE_ENV=development nodemon",
+    "start:prod": "NODE_ENV=production nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && mkdir dist && cp package.json dist/package.json && tsc"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-validator": "^3.0.0",
+    "@types/helmet": "^4.0.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "dotenv-flow": "^4.1.0",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.5.1",
+    "rate-limiter-flexible": "^5.0.3",
+    "winston": "^3.13.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
