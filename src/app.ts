@@ -5,6 +5,10 @@ import express from 'express';
 import cors from 'cors';
 import { Logger } from './utils/logger';
 import { dbConnection } from './config/dbConnection';
+import users from "./data/users.json";
+import indexV1 from "./v1";
+import indexV2 from './v2';
+import indexV3 from './v3';
 
 const app = express();
 
@@ -18,6 +22,15 @@ console.log(`Database Host: ${process.env.DB_PORT}`);
 console.log(`Database User: ${process.env.DB_NAME}`);
 
 app.use('/status', (_, res) => res.status(200).json({ message: '🚀 Server is running 🚀' }));
+
+app.use('/v1', indexV1);
+app.use('/v2', indexV2);
+app.use('/V3', indexV3);
+
+/*** Esempio di uso routes e callback in express ***/
+
+
+/**** *****/
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, async () => {

@@ -11,7 +11,8 @@
     "skipLibCheck": true,
     "typeRoots": ["./node_modules/@types"],
     "types": ["node", "mongoose"],
-    "lib" : ["ES2022"]
+    "lib" : ["ES2022"],
+    "resolveJsonModule": true
   },
   "include": [
     "src/**/*", ".env"
